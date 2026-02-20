@@ -1,7 +1,7 @@
-# Fraud GenAI Explainer (MVP)
+# Fraud Detection with Explainable AI & GenAI Reporting
 
 This project trains a baseline fraud scorer (LightGBM) on the public credit card dataset,
-enriches it with synthetic entity fields (merchant/device/IP/geo), computes SHAP drivers,
+enriches it with synthetic entity fields, computes SHAP drivers,
 builds **Evidence JSON**, and generates two grounded explanations (analyst + plain language).
 
 The goal is to demonstrate how traditional ML scoring + explainability can be combined
@@ -18,8 +18,6 @@ Download the public credit card fraud dataset and place it here:
 ```
 data/creditcard.csv
 ```
-
-> The dataset is not included in this repository due to size and licensing considerations.
 
 ---
 
@@ -65,6 +63,4 @@ These contain:
 
 - The LLM call is currently stubbed in `src/llm.py` (deterministic template output).
 - Replace the stub with a real API call if you want live GenAI-generated explanations.
-- Synthetic entity fields (merchant/device/IP/geo) are simulated for demo/demo-quality purposes.
-- This is an MVP-style explainer project, not a production-grade fraud detection system.
 - Performance tuning, threshold calibration, and monitoring are intentionally minimal.
