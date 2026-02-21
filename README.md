@@ -50,7 +50,7 @@ These contain:
 
 ---
 
-## Notes / Grey Areas
+## Notes 
 
 - The LLM call is currently stubbed in `src/llm.py` (deterministic template output).
 - Replace the stub with a real API call if you want live GenAI-generated explanations.
