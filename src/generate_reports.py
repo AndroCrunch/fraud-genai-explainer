@@ -34,6 +34,7 @@ def run_all(csv_path: str):
     )
 
     rates = compute_train_only_rates(train_df)
+    joblib.dump(rates, "artifacts/rates.pkl")   # <-- ADD THIS LINE
     train_df = apply_rates(train_df, rates)
     test_df = apply_rates(test_df, rates)
 
